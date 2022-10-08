@@ -1,34 +1,368 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
-
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.num-counter {
-    color: green;
-    font-weight: bold;
+/* HOME WORTH SECTION */
+#home-worth {
+    background: #e7e7e7;
 }
 
-.stat-line {
+#home-worth .row {
+    margin: 30px 0;
+}
+
+#home-worth .section-img-container {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+#home-worth .section-img-container img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#home-worth .section-img-container .section-img {
+    border: 10px solid #ffffff;
+    outline: 1px solid #C72B2B;
+}
+
+#home-worth .section-info-container {
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+}
+
+#home-worth .btn-effect {
+    background-color: #C72B2B;
+    border: none;
+    border-radius: 0;
+    color: #ffffff;
+    display: inline-block;
+    font-family: Montserrat,sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 12px 30px 11px;
+    position: relative;
+    text-transform: uppercase;
+    transition: background-color .3s ease;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+#home-worth .btn-effect:hover:after {
+    left: calc(100% - 32px);
+    opacity: 1;
+}
+
+#home-worth .btn-effect:hover span {
+    left: -10px;
+}
+
+#home-worth .btn-effect::after{
+    content: "\f061";
+    font-family: FontAwesome;
+    font-size: 14px;
+    height: 20px;
+    left: calc(100% - 45px);
+    line-height: 20px;
+    margin-top: -10px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transition: all .3s ease;
+    width: 20px;
+}
+
+#home-worth .btn-effect span {
+    left: 0;
+    position: relative;
+    transition: left .3s ease;
+}
+
+
+/* HOME */
+#home-counter {
+    background: #F5F5F5;
+}
+
+.section-spacing {
+    padding: 60px 0;
+}
+
+#home-counter .card-container {
+    margin: 0 25px;
+}
+
+#home-counter .count,
+#home-counter .count-info {
+    margin-bottom: 0;
+    font-size: 40px;
+    color: #C72B2B;
+    font-weight: 600;
+}
+
+#home-counter .info {
+    font-weight: 400;
+    font-size: 18px;
+    color: #787878;
+    margin: 0;
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+}
+
+#home-counter .sec-title,
+#home-counter .sec-subtitle {
     text-align: center;
 }
 
-.count, .line {
-    font-size: 45px;
-    line-height: 1;
-    letter-spacing: -1px;
-    font-weight: 800;
+#home-counter .counter-card {
+    display: flex;
+    background: #ffffff;
+    padding: 25px 20px;
+    margin: 10px 0;
+}
+
+#home-counter .counter-card .logo {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-counter .counter-card .logo img {
+    height: 65px;
+    width: auto;
+}
+
+#communities-slider {
+    overflow: hidden;
+}
+
+#communities-slider img {
+    display: block;
+    height: 310px;
+    margin: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+#communities-slider .slider-item {
+    padding: 0 5px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+#communities-slider .slider-item .title {
+    padding: 10px;
+    font-weight: 700;
+    font-size: 20px;
     color: #000;
 }
 
-.label {
-    display: inline-block;
-    color: #bb2d2d;
-    font-size: 24px;
-    line-height: 1.2;
-    margin-top: 8px;
+#communities-slider .slick-arrow {
+    position: absolute;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    margin: 0 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 9;
+    border-radius: 50%;
 }
 
-.stat {
-    margin-top: 30px;
+#communities-slider .slick-next:before, 
+#communities-slider .slick-prev:before {
+    font-family: slick;
+    font-size: 35px;
+    line-height: 1.6;
+    color: #C72B2B;
+}
+
+/* Extra Small devices (landscape phones) */
+@media (max-width: 546px){
+
+    #home-counter .count,
+    #home-counter .count-info {
+        font-size: 25px;
+    }
+
+    #home-counter .count-line {
+        margin-bottom: 3px;
+    }
+
+    #home-counter .counter-card {
+        display: block;
+        padding: 20px;
+        text-align: center;
+        min-height: 120px;
+    }
+
+    #home-counter .info {
+        font-size: 15px;
+        display: block;
+    }
+
+    #home-counter .counter-card .logo {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    #home-counter .counter-card .logo img {
+        height:50px;
+        width: auto;
+    }
+
+    #home-worth .section-info-container {
+        text-align: center;
+        padding: 25px;
+    }
+
+    #home-worth .section-img-container {
+        padding: 0 25px;
+    }
+
+    #communities-slider img {
+        height: 200px;
+    }
+}
+
+
+/* Small devices (landscape phones) */
+@media (min-width: 547px) and (max-width: 767px){
+    /* #home-counter .counter-card {
+        background: red;
+    } */
+
+    #home-counter .count,
+    #home-counter .count-info {
+        font-size: 25px;
+    }
+
+    #home-counter .count-line {
+        margin-bottom: 3px;
+    }
+
+    #home-counter .counter-card {
+        display: block;
+        padding: 25px 20px;
+        text-align: center;
+        min-height: auto;
+    }
+
+    #home-counter .info {
+        font-size: 15px;
+        display: block;
+    }
+
+    #home-counter .counter-card .logo {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    #home-counter .counter-card .logo img {
+        height:50px;
+        width: auto;
+    }
+
+    #home-worth .section-info-container {
+        text-align: center;
+        padding: 25px;
+    }
+
+    #home-worth .section-img-container {
+        padding: 0 25px;
+    }
+
+    #communities-slider img {
+        height: 200px;
+    }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 991px){
+    #home-counter .counter-card {
+        /* background: yellow; */
+        min-height: 70px;
+    }
+
+    #home-counter .info {
+        font-size: 17px;
+    }
+
+    #home-counter .count,
+    #home-counter .count-info {
+        font-size: 30px;
+    }
+
+    #home-worth .row {
+        margin: 15px 0;
+    }
+
+    #home-counter .sec-title,
+    #home-worth .sec-title {
+        font-size: 24px;
+    }
+
+    #communities-slider img {
+        height: 210px;
+    }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) and (max-width: 1199px){
+    /* #home-counter .counter-card {
+        background: green;
+    } */
+
+    #home-counter .info {
+        font-size: 16px;
+    }
+
+    #home-counter .counter-card .logo img {
+        height: 60px;
+        width: auto;
+    }
+
+    #home-counter .counter-card .logo {
+        margin-right: 8px;
+    }
+
+    #home-counter .count,
+    #home-counter .count-info {
+        font-size: 30px;
+    }
+
+    #communities-slider img {
+        height: 250px;
+    }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 1200px) {
+    /* #home-counter .counter-card {
+        background: blue;
+    } */
+}
+
+@media only screen and (min-width: 75em) {
+    .container {
+        width: 1170px;
+    }
+}
+
+@media only screen and (min-width: 64em) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media only screen and (min-width: 48em) {
+    .container {
+        width: 750px;
+    }
 }
